@@ -5,8 +5,8 @@ export default function Nav() {
         <nav className="h-[50px] w-full bg-gray-800 text-white flex items-center gap-3 p-3">
             <Link href="/">Firestore database</Link>
             <Link href="/realtime">RealTime Database</Link>
-            <Link href="/signInandUp">Login</Link>
             <Link href="/dashboard">Dashboard</Link>
+            <Link href="/login">Login</Link>
         </nav>
     )
 }
