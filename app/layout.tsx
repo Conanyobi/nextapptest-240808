@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
+import SessionWrapper from "@/components/auth/SessionWrapper";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,11 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <Nav/>
-        {children}
-        </body>
-    </html>
+    <SessionWrapper>
+      <html lang="fr">
+        <body className={montserrat.className}>
+          <Nav/>
+          {children}
+          </body>
+      </html>
+    </SessionWrapper>
   );
 }
